@@ -33,7 +33,7 @@ function App(): JSX.Element {
                                         <li>First thing</li>
                                         <li>Second thing</li>
                                         <li>Another thing</li>
-                                        <li>Final thing</li>
+                                        <div className="App-rectangle"></div>
                                     </ol>
                                 </div>
                             </Col>
@@ -42,6 +42,7 @@ function App(): JSX.Element {
                                 <nav>Here is some more text</nav>
                                 <nav>And a little bit more text</nav>
                                 <nav>Below is a red rectangle</nav>
+                                <div className="App-rectangle"></div>
                             </Col>
                         </Row>
                     </Container>
