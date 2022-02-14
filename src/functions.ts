@@ -1,4 +1,4 @@
-import { text } from "stream/consumers";
+//import { text } from "stream/consumers";
 
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
