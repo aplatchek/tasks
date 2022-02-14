@@ -6,7 +6,7 @@ import { text } from "stream/consumers";
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    let celsius: number = 0;
+    let celsius = 0;
     celsius = ((temperature - 32) * 5) / 9;
     return celsius;
 }
@@ -16,7 +16,7 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    let sum: number = 0;
+    let sum = 0;
     if (first > 0) {
         sum = sum + first;
     }
@@ -34,7 +34,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let newstring: string = "";
+    let newstring = "";
     newstring = message.toUpperCase();
     newstring += "!";
     return newstring;
