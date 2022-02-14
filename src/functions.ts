@@ -1,10 +1,14 @@
+import { text } from "stream/consumers";
+
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
  * using this formula:
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    let celsius: number = 0;
+    celsius = ((temperature - 32) * 5) / 9;
+    return celsius;
 }
 
 /**
@@ -12,7 +16,17 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let sum: number = 0;
+    if (first > 0) {
+        sum = sum + first;
+    }
+    if (second > 0) {
+        sum = sum + second;
+    }
+    if (third > 0) {
+        sum = sum + third;
+    }
+    return sum;
 }
 
 /**
@@ -20,7 +34,10 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    let newstring: string = "";
+    newstring = message.toUpperCase();
+    newstring += "!";
+    return newstring;
 }
 
 /**
@@ -28,7 +45,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message.charAt(message.length - 1) === "?";
 }
 
 /**
@@ -37,5 +54,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word === "yes" || word === "YES") {
+        return true;
+    } else if (word === "no" || word == "NO") {
+        return false;
+    } else {
+        return null;
+    }
 }
