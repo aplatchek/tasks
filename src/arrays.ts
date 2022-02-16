@@ -168,6 +168,6 @@ export function injectPositive(values: number[]): number[] {
         return finalArr;
     }
 }
-function price(price: any, string: any) {
+/*function price(price: any, string: any) {
     throw new Error("Function not implemented.");
-}
+}*/
