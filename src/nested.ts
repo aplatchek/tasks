@@ -1,8 +1,8 @@
-import { getValue } from "@testing-library/user-event/dist/utils";
-import { idText } from "typescript";
+//import { getValue } from "@testing-library/user-event/dist/utils";
+//import { idText } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { duplicateQuestion, publishQuestion } from "./objects";
+//import { duplicateQuestion, publishQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
