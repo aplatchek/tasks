@@ -338,8 +338,5 @@ export function duplicateQuestionInArray(
     const newQuestions3 = newQuestions2.concat(
         newQuestions.slice(targetIndex + 1)
     );
-    console.log("1: ", newQuestions1);
-    console.log("2: ", newQuestions2);
-    console.log("3: ", newQuestions3);
     return newQuestions3;
 }
