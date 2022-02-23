@@ -191,7 +191,7 @@ What shape can you make with one line?
             points: 1,
             published: true
         });
-        expect(publishQuestion(ADDITION_QUESTION)).toEqual({
+        expect(publishQuestion(publishQuestion(ADDITION_QUESTION))).toEqual({
             id: 1,
             name: "Addition",
             body: "What is 2+2?",
