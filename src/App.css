@@ -49,3 +49,75 @@
         transform: rotate(360deg);
     }
 }
+
+.red-box {
+    width: 10%;
+    background-color: red;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.blue-box {
+    width: 10%;
+    background-color: blue;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.green-box {
+    width: 10%;
+    background-color: green;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.orange-box {
+    width: 10%;
+    background-color: orange;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.purple-box {
+    width: 10%;
+    background-color: purple;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.yellow-box {
+    width: 10%;
+    background-color: yellow;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.cyan-box {
+    width: 10%;
+    background-color: cyan;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.magenta-box {
+    width: 10%;
+    background-color: magenta;
+    min-height: 5vh;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
