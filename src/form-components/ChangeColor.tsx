@@ -27,7 +27,7 @@ export function ChangeColor(): JSX.Element {
 
     function chooseBackground(fav: string): string {
         console.log(favorite);
-        return fav + "-box";
+        return fav;
     }
     return (
         <div>
@@ -126,11 +126,17 @@ export function ChangeColor(): JSX.Element {
                 </Form.Group>
             </p>
             Your have chosen
-            <label
-                data-testid="colored-box"
-                className={chooseBackground(favorite)}
-            >
-                {favorite}.
+            <label>
+                <div
+                    data-testid="colored-box"
+                    style={{
+                        backgroundColor: String(chooseBackground(favorite)),
+                        width: "75px",
+                        height: "30px"
+                    }}
+                >
+                    {favorite}.
+                </div>
             </label>
         </div>
     );
