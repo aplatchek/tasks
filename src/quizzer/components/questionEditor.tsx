@@ -7,12 +7,14 @@ export function QuestionEditor({
     changeEditing,
     question,
     editQuestion,
-    deleteQuestion
+    deleteQuestion,
+    publishQuestion
 }: {
     changeEditing: () => void;
     question: Question;
     editQuestion: (id: number, newQuestion: Question) => void;
     deleteQuestion: (id: number) => void;
+    publishQuestion: (id: number) => void;
 }): JSX.Element {
     const [title, setTitle] = useState<string>(question.name);
     const [description, setDescription] = useState<string>(question.body);
@@ -28,10 +30,6 @@ export function QuestionEditor({
 
     function cancel() {
         changeEditing();
-    }
-
-    function publishQuestion(id: number) {
-        changePublishing(id);
     }
 
     return (

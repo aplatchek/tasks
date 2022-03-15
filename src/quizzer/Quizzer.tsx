@@ -16,15 +16,6 @@ export function Quizzer(): JSX.Element {
     const [viewing, setViewing] = useState<boolean>(false);
     //const [showAddModal, setShowAddModal] = useState(false);
 
-    /*function editQuestion(id: number, newQuestion: Question) {
-        setQuestions(
-            questions.map(
-                (question: Question): Question =>
-                    question.id === id ? newQuestion : question
-            )
-        );
-    }*/
-
     function viewQuiz(id: number, newQuiz: Quiz) {
         setQuizzes(
             quizzes.map((quiz: Quiz): Quiz => (quiz.id === id ? newQuiz : quiz))
@@ -33,6 +24,19 @@ export function Quizzer(): JSX.Element {
 
     function deleteQuiz(id: number) {
         setQuizzes(quizzes.filter((quiz: Quiz): boolean => quiz.id !== id));
+    }
+
+    function deleteQuestion(id: number) {
+        setQuizzes(
+            quizzes.map(
+                (newquiz: Quiz): Quiz => ({
+                    ...newquiz,
+                    questions: newquiz.questions.filter(
+                        (question1: Question): boolean => question1.id !== id
+                    )
+                })
+            )
+        );
     }
 
     function editQuestion(id: number, newQuestion: Question) {
@@ -49,34 +53,29 @@ export function Quizzer(): JSX.Element {
         );
     }
 
-    function deleteQuestion(id: number) {
+    function publishQuestion(id: number) {
         setQuizzes(
             quizzes.map(
                 (newquiz: Quiz): Quiz => ({
                     ...newquiz,
-                    questions: newquiz.questions.filter(
-                        (question1: Question): boolean => question1.id !== id
+                    questions: newquiz.questions.map(
+                        (question1: Question): Question => ({
+                            ...question1,
+                            published:
+                                question1.id === id
+                                    ? publishHelper(question1)
+                                    : question1.published
+                        })
                     )
                 })
             )
         );
     }
 
-    /*function changePublishing(id: number) {
-        setQuizzes(
-            quizzes.map(
-                (newquiz: Quiz): Quiz => ({
-                    ...newquiz,
-                    questions: newquiz.questions.map(
-                        (question1: Question): Question => [...question1],
-                        question1.id === id
-                            ? !question1.published
-                            : question1.published
-                    )
-                })
-            )
-        );
-    }*/
+    function publishHelper(question1: Question): boolean {
+        question1.published = !question1.published;
+        return question1.published;
+    }
 
     function addQuiz(newQuiz: Quiz) {
         const existing = quizzes.find(
@@ -100,7 +99,9 @@ export function Quizzer(): JSX.Element {
                     <li>Quizzes have questions</li>
                     <li>Short answer and multiple choice</li>
                     <li>Check correctness</li>
-                    <li>Delate quizzes </li>
+                    <li>Edit questions</li>
+                    <li>Delete quizzes </li>
+                    <li>Working on: publish/unpublish questions</li>
                 </ul>
             </>
             <div>
@@ -112,6 +113,7 @@ export function Quizzer(): JSX.Element {
                     viewQuiz={viewQuiz}
                     editQuestion={editQuestion}
                     deleteQuestion={deleteQuestion}
+                    publishQuestion={publishQuestion}
                 ></QuizList>
             </div>
         </>

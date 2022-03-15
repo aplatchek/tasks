@@ -13,11 +13,13 @@ type ChangeEvent = React.ChangeEvent<
 export function QuestionView({
     question,
     deleteQuestion,
-    editQuestion
+    editQuestion,
+    publishQuestion
 }: {
     question: Question;
     deleteQuestion: (id: number) => void;
     editQuestion: (id: number, newQuestion: Question) => void;
+    publishQuestion: (id: number) => void;
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
     const [answer, setAnswer] = useState<string>("");
@@ -36,6 +38,7 @@ export function QuestionView({
             question={question}
             editQuestion={editQuestion}
             deleteQuestion={deleteQuestion}
+            publishQuestion={publishQuestion}
         ></QuestionEditor>
     ) : (
         <Container>

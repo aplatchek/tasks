@@ -12,7 +12,8 @@ export function QuizList({
     editQuestion,
     deleteQuestion,
     viewing,
-    setViewing
+    setViewing,
+    publishQuestion
 }: {
     quizzes: Quiz[];
     deleteQuiz: (id: number) => void;
@@ -21,6 +22,7 @@ export function QuizList({
     deleteQuestion: (id: number) => void;
     viewing: boolean;
     setViewing: (viewing: boolean) => void;
+    publishQuestion: (id: number) => void;
 }): JSX.Element {
     return viewing ? (
         <Stack gap={3}>
@@ -40,6 +42,7 @@ export function QuizList({
                                 question={question}
                                 deleteQuestion={deleteQuestion}
                                 editQuestion={editQuestion}
+                                publishQuestion={publishQuestion}
                             ></QuestionView>
                         </div>
                     ))}
