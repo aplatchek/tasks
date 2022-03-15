@@ -30,6 +30,10 @@ export function QuestionEditor({
         changeEditing();
     }
 
+    function publishQuestion(id: number) {
+        changePublishing(id);
+    }
+
     return (
         <Container>
             <Row>
@@ -77,6 +81,14 @@ export function QuestionEditor({
                     >
                         Delete
                     </Button>
+                    <Button
+                        onClick={() => publishQuestion(question.id)}
+                        variant="danger"
+                        className="me-11"
+                    >
+                        Publish/Unpublish
+                    </Button>
+                    {question.published ? "published" : "not published"}
                 </Col>
             </Row>
         </Container>

@@ -45,6 +45,11 @@ export function QuestionView({
                         {question.name} {" - "} {question.points} {" points"}
                     </p>
                     <p>{question.body}</p>
+                    <Col>
+                        <RecordControlsQuestion
+                            changeEditing={changeEditing}
+                        ></RecordControlsQuestion>
+                    </Col>
                     {question.type === "short_answer_question" ? (
                         <p>
                             <Form.Group controlId="giveAttempts">
@@ -79,13 +84,7 @@ export function QuestionView({
                     )}
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <RecordControlsQuestion
-                        changeEditing={changeEditing}
-                    ></RecordControlsQuestion>
-                </Col>
-            </Row>
+            <Row></Row>
         </Container>
     );
 }

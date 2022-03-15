@@ -44,6 +44,7 @@ export function QuizView({
                         <RecordControlsQuiz
                             changeViewing={changeViewing}
                         ></RecordControlsQuiz>
+                        {"                       "}
                         <Button
                             onClick={() => deleteQuiz(quiz.id)}
                             variant="danger"

@@ -16,7 +16,7 @@
                 "published": false
             },
             {
-                "id": 47,
+                "id": 2,
                 "name": "My New Question",
                 "body": "",
                 "type": "multiple_choice_question",
@@ -26,7 +26,7 @@
                 "published": false
             },
             {
-                "id": 2,
+                "id": 3,
                 "name": "Question 2",
                 "body": "",
                 "type": "short_answer_question",
@@ -44,7 +44,7 @@
         "title": "Q2",
         "questions": [
             {
-                "id": 1,
+                "id": 4,
                 "name": "Addition",
                 "body": "What is 2+2?",
                 "type": "short_answer_question",
@@ -54,7 +54,7 @@
                 "published": true
             },
             {
-                "id": 2,
+                "id": 5,
                 "name": "Letters",
                 "body": "What is the last letter of the English alphabet?",
                 "type": "short_answer_question",
@@ -64,7 +64,7 @@
                 "published": false
             },
             {
-                "id": 5,
+                "id": 6,
                 "name": "Colors",
                 "body": "Which of these is a color?",
                 "type": "multiple_choice_question",
@@ -74,7 +74,7 @@
                 "published": true
             },
             {
-                "id": 9,
+                "id": 7,
                 "name": "Shapes",
                 "body": "What shape can you make with one line?",
                 "type": "multiple_choice_question",
@@ -92,7 +92,7 @@
         "title": "Q3",
         "questions": [
             {
-                "id": 1,
+                "id": 8,
                 "name": "Mascot",
                 "body": "What is the name of the UD Mascot?",
                 "type": "multiple_choice_question",
@@ -102,7 +102,7 @@
                 "published": false
             },
             {
-                "id": 2,
+                "id": 9,
                 "name": "Motto",
                 "body": "What is the University of Delaware's motto?",
                 "type": "multiple_choice_question",
@@ -116,7 +116,7 @@
                 "published": false
             },
             {
-                "id": 3,
+                "id": 10,
                 "name": "Goats",
                 "body": "How many goats are there usually on the Green?",
                 "type": "multiple_choice_question",
@@ -138,7 +138,7 @@
         "title": "Q4",
         "questions": [
             {
-                "id": 1,
+                "id": 11,
                 "name": "Empty 1",
                 "body": "This question is not empty, right?",
                 "type": "multiple_choice_question",
@@ -148,7 +148,7 @@
                 "published": true
             },
             {
-                "id": 2,
+                "id": 12,
                 "name": "Empty 2",
                 "body": "",
                 "type": "multiple_choice_question",
@@ -158,7 +158,7 @@
                 "published": true
             },
             {
-                "id": 3,
+                "id": 13,
                 "name": "Empty 3",
                 "body": "This questions is not empty either!",
                 "type": "short_answer_question",
@@ -168,7 +168,7 @@
                 "published": true
             },
             {
-                "id": 4,
+                "id": 14,
                 "name": "Empty 4",
                 "body": "",
                 "type": "short_answer_question",
@@ -178,7 +178,7 @@
                 "published": true
             },
             {
-                "id": 5,
+                "id": 15,
                 "name": "Empty 5 (Actual)",
                 "body": "",
                 "type": "short_answer_question",
@@ -196,7 +196,7 @@
         "title": "Q5",
         "questions": [
             {
-                "id": 478,
+                "id": 16,
                 "name": "Students",
                 "body": "How many students are taking CISC275 this semester?",
                 "type": "short_answer_question",
