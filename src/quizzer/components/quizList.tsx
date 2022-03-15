@@ -8,7 +8,7 @@ import { QuestionView } from "./questionView";
 export function QuizList({
     quizzes,
     deleteQuiz,
-    viewQuiz,
+    //viewQuiz,
     editQuestion,
     deleteQuestion,
     viewing,
@@ -17,7 +17,7 @@ export function QuizList({
 }: {
     quizzes: Quiz[];
     deleteQuiz: (id: number) => void;
-    viewQuiz: (id: number, newQuiz: Quiz) => void;
+    //viewQuiz: (id: number, newQuiz: Quiz) => void;
     editQuestion: (id: number, newQuestion: Question) => void;
     deleteQuestion: (id: number) => void;
     viewing: boolean;
@@ -31,8 +31,8 @@ export function QuizList({
                     <QuizView
                         quiz={quiz}
                         deleteQuiz={deleteQuiz}
-                        viewQuiz={viewQuiz}
-                        editQuestion={editQuestion}
+                        //viewQuiz={viewQuiz}
+                        //editQuestion={editQuestion}
                         viewing={viewing}
                         setViewing={setViewing}
                     ></QuizView>
@@ -56,8 +56,8 @@ export function QuizList({
                     <QuizView
                         quiz={quiz}
                         deleteQuiz={deleteQuiz}
-                        viewQuiz={viewQuiz}
-                        editQuestion={editQuestion}
+                        //viewQuiz={viewQuiz}
+                        //editQuestion={editQuestion}
                         viewing={viewing}
                         setViewing={setViewing}
                     ></QuizView>

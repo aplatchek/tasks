@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Quiz } from "../interfaces/quiz";
+//import { Quiz } from "../interfaces/quiz";
 import { Question } from "../interfaces/question";
 import { RecordControlsQuestion } from "./RecordControls";
 import { QuestionEditor } from "./questionEditor";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
 >;
