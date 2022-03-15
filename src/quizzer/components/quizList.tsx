@@ -34,19 +34,15 @@ export function QuizList({
                         viewing={viewing}
                         setViewing={setViewing}
                     ></QuizView>
-                    {viewing ? (
-                        quiz.questions.map((question: Question) => (
-                            <div key={question.id}>
-                                <QuestionView
-                                    question={question}
-                                    deleteQuestion={deleteQuestion}
-                                    editQuestion={editQuestion}
-                                ></QuestionView>
-                            </div>
-                        ))
-                    ) : (
-                        <></>
-                    )}
+                    {quiz.questions.map((question: Question) => (
+                        <div key={question.id}>
+                            <QuestionView
+                                question={question}
+                                deleteQuestion={deleteQuestion}
+                                editQuestion={editQuestion}
+                            ></QuestionView>
+                        </div>
+                    ))}
                 </div>
             ))}
         </Stack>

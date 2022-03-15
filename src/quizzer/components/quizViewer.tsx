@@ -34,13 +34,7 @@ export function QuizViewer({
 
                 <p>{quiz.description}</p>
             </Col>
-            <div>
-                <QuestionView
-                    question={questions[0]}
-                    deleteQuestion={deleteQuiz}
-                    editQuestion={editQuestion}
-                ></QuestionView>
-            </div>
+            <div></div>
         </>
     );
 }
