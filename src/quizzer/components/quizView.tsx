@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import { Quiz } from "../interfaces/quiz";
 import { RecordControlsQuiz } from "./RecordControls";
 import { QuizViewer } from "./quizViewer";
@@ -44,6 +44,13 @@ export function QuizView({
                         <RecordControlsQuiz
                             changeViewing={changeViewing}
                         ></RecordControlsQuiz>
+                        <Button
+                            onClick={() => deleteQuiz(quiz.id)}
+                            variant="danger"
+                            className="me-8"
+                        >
+                            Delete Quiz
+                        </Button>
                     </h3>
                     <p>
                         {quiz.description} {}{" "}

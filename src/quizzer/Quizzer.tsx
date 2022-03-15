@@ -70,7 +70,6 @@ export function Quizzer(): JSX.Element {
                     <li>Quizzes have questions</li>
                     <li>Short answer and multiple choice</li>
                     <li>Check correctness</li>
-                    <li>Delete quizzes</li>
                 </ul>
             </>
             <div>
