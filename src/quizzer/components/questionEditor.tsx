@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container, Row, Col, Form } from "react-bootstrap";
-import { Quiz } from "../interfaces/quiz";
+//import { Quiz } from "../interfaces/quiz";
 import { Question } from "../interfaces/question";
 
 export function QuestionEditor({

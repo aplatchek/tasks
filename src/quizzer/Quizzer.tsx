@@ -3,24 +3,21 @@ import questioning from "./data/initalQuestions.json";
 import { Quiz } from "./interfaces/quiz";
 import { QuizList } from "./components/quizList";
 import { Question } from "./interfaces/question";
-import { propTypes } from "react-bootstrap/esm/Image";
+//import { propTypes } from "react-bootstrap/esm/Image";
 
 const QUIZZES = questioning.map((quiz): Quiz => ({ ...quiz }));
 
 export function Quizzer(): JSX.Element {
     //quizzer info
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
-    const [questions, setQuestions] = useState<Question[]>(
-        QUIZZES[0].questions
-    );
     const [viewing, setViewing] = useState<boolean>(false);
     //const [showAddModal, setShowAddModal] = useState(false);
 
-    function viewQuiz(id: number, newQuiz: Quiz) {
+    /*function viewQuiz(id: number, newQuiz: Quiz) {
         setQuizzes(
             quizzes.map((quiz: Quiz): Quiz => (quiz.id === id ? newQuiz : quiz))
         );
-    }
+    }*/
 
     function deleteQuiz(id: number) {
         setQuizzes(quizzes.filter((quiz: Quiz): boolean => quiz.id !== id));
@@ -77,14 +74,14 @@ export function Quizzer(): JSX.Element {
         return question1.published;
     }
 
-    function addQuiz(newQuiz: Quiz) {
+    /*function addQuiz(newQuiz: Quiz) {
         const existing = quizzes.find(
             (quiz: Quiz): boolean => quiz.id === newQuiz.id
         );
         if (existing === undefined) {
             setQuizzes([...quizzes, newQuiz]);
         }
-    }
+    }*/
 
     //const handleCloseAddModal = () => setShowAddModal(false);
     //const handleShowAddModal = () => setShowAddModal(true);
@@ -99,6 +96,7 @@ export function Quizzer(): JSX.Element {
                     <li>Quizzes have questions</li>
                     <li>Short answer and multiple choice</li>
                     <li>Check correctness</li>
+                    <li>Publish questions</li>
                     <li>Edit questions</li>
                     <li>Delete quizzes </li>
                     <li>Working on: publish/unpublish questions</li>
@@ -110,7 +108,7 @@ export function Quizzer(): JSX.Element {
                     setViewing={setViewing}
                     quizzes={quizzes}
                     deleteQuiz={deleteQuiz}
-                    viewQuiz={viewQuiz}
+                    //viewQuiz={viewQuiz}
                     editQuestion={editQuestion}
                     deleteQuestion={deleteQuestion}
                     publishQuestion={publishQuestion}
