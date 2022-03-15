@@ -41,12 +41,12 @@ export function QuizView({
                     <h3>
                         {quiz.title} {" - "} {quiz.numberQuestions}{" "}
                         {" questions"}
-                    </h3>
-                    <p>
-                        {quiz.description} {}{" "}
                         <RecordControlsQuiz
                             changeViewing={changeViewing}
                         ></RecordControlsQuiz>
+                    </h3>
+                    <p>
+                        {quiz.description} {}{" "}
                     </p>
                 </div>
             </Row>

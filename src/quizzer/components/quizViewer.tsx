@@ -27,7 +27,11 @@ export function QuizViewer({
             <Col>
                 <h3>
                     {quiz.title} {" - "} {quiz.numberQuestions} {" questions"}
+                    <RecordControlsQuiz
+                        changeViewing={changeView}
+                    ></RecordControlsQuiz>
                 </h3>
+
                 <p>{quiz.description}</p>
             </Col>
             <div>
@@ -37,7 +41,6 @@ export function QuizViewer({
                     editQuestion={editQuestion}
                 ></QuestionView>
             </div>
-            <RecordControlsQuiz changeViewing={changeView}></RecordControlsQuiz>
         </>
     );
 }
