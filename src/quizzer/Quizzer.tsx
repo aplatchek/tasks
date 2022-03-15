@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import question from "./data/initalQuestions.json";
+import questioning from "./data/initalQuestions.json";
 import { Quiz } from "./interfaces/quiz";
 import { QuizList } from "./components/quizList";
 import { Question } from "./interfaces/question";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-const QUIZZES = question.map((quiz): Quiz => ({ ...quiz }));
+const QUIZZES = questioning.map((quiz): Quiz => ({ ...quiz }));
 
 export function Quizzer(): JSX.Element {
     //quizzer info
@@ -12,6 +13,7 @@ export function Quizzer(): JSX.Element {
     const [questions, setQuestions] = useState<Question[]>(
         QUIZZES[0].questions
     );
+    const [viewing, setViewing] = useState<boolean>(false);
     //const [showAddModal, setShowAddModal] = useState(false);
 
     function editQuestion(id: number, newQuestion: Question) {
@@ -31,6 +33,19 @@ export function Quizzer(): JSX.Element {
 
     function deleteQuiz(id: number) {
         setQuizzes(quizzes.filter((quiz: Quiz): boolean => quiz.id !== id));
+    }
+
+    function deleteQuestion(id: number) {
+        setQuizzes(
+            quizzes.map(
+                (newquiz: Quiz): Quiz => ({
+                    ...newquiz,
+                    questions: newquiz.questions.filter(
+                        (question1: Question): boolean => question1.id !== id
+                    )
+                })
+            )
+        );
     }
 
     function addQuiz(newQuiz: Quiz) {
@@ -57,10 +72,13 @@ export function Quizzer(): JSX.Element {
             </>
             <div>
                 <QuizList
+                    viewing={viewing}
+                    setViewing={setViewing}
                     quizzes={quizzes}
                     deleteQuiz={deleteQuiz}
                     viewQuiz={viewQuiz}
                     editQuestion={editQuestion}
+                    deleteQuestion={deleteQuestion}
                 ></QuizList>
             </div>
         </>

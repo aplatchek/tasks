@@ -10,15 +10,17 @@ export function QuizView({
     quiz,
     deleteQuiz,
     viewQuiz,
-    editQuestion
+    editQuestion,
+    viewing,
+    setViewing
 }: {
     quiz: Quiz;
     deleteQuiz: (id: number) => void;
     viewQuiz: (id: number, newQuiz: Quiz) => void;
     editQuestion: (id: number, newQuestion: Question) => void;
+    viewing: boolean;
+    setViewing: (viewing: boolean) => void;
 }): JSX.Element {
-    const [viewing, setViewing] = useState<boolean>(false);
-
     function changeViewing() {
         setViewing(!viewing);
     }
@@ -30,6 +32,7 @@ export function QuizView({
             viewQuiz={viewQuiz}
             deleteQuiz={deleteQuiz}
             editQuestion={editQuestion}
+            viewing={viewing}
         ></QuizViewer>
     ) : (
         <Container>

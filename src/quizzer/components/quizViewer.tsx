@@ -10,13 +10,15 @@ export function QuizViewer({
     quiz,
     viewQuiz,
     deleteQuiz,
-    editQuestion
+    editQuestion,
+    viewing
 }: {
     changeView: () => void;
     quiz: Quiz;
     viewQuiz: (id: number, newQuiz: Quiz) => void;
     deleteQuiz: (id: number) => void;
     editQuestion: (id: number, newQuestion: Question) => void;
+    viewing: boolean;
 }): JSX.Element {
     const [questions, setQuestions] = useState<Question[]>(quiz.questions);
 
@@ -28,7 +30,6 @@ export function QuizViewer({
                 </h3>
                 <p>{quiz.description}</p>
             </Col>
-            <p>In view mode</p>
             <div>
                 <QuestionView
                     question={questions[0]}
