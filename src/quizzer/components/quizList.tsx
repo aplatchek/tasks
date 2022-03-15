@@ -2,15 +2,19 @@ import React from "react";
 import { Quiz } from "../interfaces/quiz";
 import { Stack } from "react-bootstrap";
 import { QuizView } from "./quizView";
+import { Question } from "../interfaces/question";
+import { QuestionView } from "./questionView";
 
 export function QuizList({
     quizzes,
     deleteQuiz,
-    editQuiz
+    viewQuiz,
+    editQuestion
 }: {
     quizzes: Quiz[];
-    deleteQuiz: (id: string) => void;
-    editQuiz: (id: string, newQuiz: Quiz) => void;
+    deleteQuiz: (id: number) => void;
+    viewQuiz: (id: number, newQuiz: Quiz) => void;
+    editQuestion: (id: number, newQuestion: Question) => void;
 }): JSX.Element {
     return (
         <Stack gap={3}>
@@ -19,8 +23,18 @@ export function QuizList({
                     <QuizView
                         quiz={quiz}
                         deleteQuiz={deleteQuiz}
-                        editQuiz={editQuiz}
+                        viewQuiz={viewQuiz}
+                        editQuestion={editQuestion}
                     ></QuizView>
+                    {quiz.questions.map((question: Question) => (
+                        <div key={question.id}>
+                            <QuestionView
+                                question={question}
+                                deleteQuestion={deleteQuiz}
+                                editQuestion={editQuestion}
+                            ></QuestionView>
+                        </div>
+                    ))}
                 </div>
             ))}
         </Stack>

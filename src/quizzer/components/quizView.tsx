@@ -2,44 +2,51 @@ import React from "react";
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Quiz } from "../interfaces/quiz";
-import { RecordControls } from "./RecordControls";
-import { QuizEditor } from "./quizEditor";
+import { RecordControlsQuiz } from "./RecordControls";
+import { QuizViewer } from "./quizViewer";
+import { Question } from "../interfaces/question";
 
 export function QuizView({
     quiz,
     deleteQuiz,
-    editQuiz
+    viewQuiz,
+    editQuestion
 }: {
     quiz: Quiz;
-    deleteQuiz: (id: string) => void;
-    editQuiz: (id: string, newQuiz: Quiz) => void;
+    deleteQuiz: (id: number) => void;
+    viewQuiz: (id: number, newQuiz: Quiz) => void;
+    editQuestion: (id: number, newQuestion: Question) => void;
 }): JSX.Element {
-    const [editing, setEditing] = useState<boolean>(false);
+    const [viewing, setViewing] = useState<boolean>(false);
 
-    function changeEditing() {
-        setEditing(!editing);
+    function changeViewing() {
+        setViewing(!viewing);
     }
 
-    return editing ? (
-        <QuizEditor
-            changeEditing={changeEditing}
+    return viewing ? (
+        <QuizViewer
+            changeView={changeViewing}
             quiz={quiz}
-            editQuiz={editQuiz}
+            viewQuiz={viewQuiz}
             deleteQuiz={deleteQuiz}
-        ></QuizEditor>
+            editQuestion={editQuestion}
+        ></QuizViewer>
     ) : (
         <Container>
             <Row>
                 <Col>
-                    <h3>{quiz.title}</h3>
-                    <RecordControls
-                        changeEditing={changeEditing}
-                    ></RecordControls>
+                    <h3>
+                        {quiz.title} {" - "} {quiz.numberQuestions}{" "}
+                        {" questions"}
+                    </h3>
+                    <p>{quiz.description}</p>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <p>{quiz.description}</p>
+                    <RecordControlsQuiz
+                        changeViewing={changeViewing}
+                    ></RecordControlsQuiz>
                 </Col>
             </Row>
         </Container>

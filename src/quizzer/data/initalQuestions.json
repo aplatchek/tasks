@@ -2,7 +2,7 @@
     {
         "numberQuestions": 3,
         "description": "this is the first set of test questions",
-        "id": "1",
+        "id": 1,
         "title": "Q1",
         "questions": [
             {
@@ -40,7 +40,7 @@
     {
         "numberQuestions": 4,
         "description": "this is the second set of test questions",
-        "id": "2",
+        "id": 2,
         "title": "Q2",
         "questions": [
             {
@@ -88,7 +88,7 @@
     {
         "numberQuestions": 3,
         "description": "this is the third set of test questions",
-        "id": "3",
+        "id": 3,
         "title": "Q3",
         "questions": [
             {
@@ -134,7 +134,7 @@
     {
         "numberQuestions": 5,
         "description": "this is the fourth set of test questions",
-        "id": "4",
+        "id": 4,
         "title": "Q4",
         "questions": [
             {
@@ -192,7 +192,7 @@
     {
         "numberQuestions": 5,
         "description": "this is the fifth set of test questions",
-        "id": "5",
+        "id": 5,
         "title": "Q5",
         "questions": [
             {

@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import { Button, Container, Row, Col, Form } from "react-bootstrap";
 import { Quiz } from "../interfaces/quiz";
+import { Question } from "../interfaces/question";
 
-export function QuizEditor({
+export function QuestionEditor({
     changeEditing,
-    quiz,
-    editQuiz,
-    deleteQuiz
+    question,
+    editQuestion,
+    deleteQuestion
 }: {
     changeEditing: () => void;
-    quiz: Quiz;
-    editQuiz: (id: string, newQuiz: Quiz) => void;
-    deleteQuiz: (id: string) => void;
+    question: Question;
+    editQuestion: (id: number, newQuestion: Question) => void;
+    deleteQuestion: (id: number) => void;
 }): JSX.Element {
-    const [title, setTitle] = useState<string>(quiz.id);
-    const [description, setDescription] = useState<string>(quiz.description);
+    const [title, setTitle] = useState<string>(question.name);
+    const [description, setDescription] = useState<string>(question.body);
 
     function save() {
-        editQuiz(quiz.id, {
-            ...quiz,
-            title: title,
-            description: description
+        editQuestion(question.id, {
+            ...question,
+            name: title,
+            body: description
         });
         changeEditing();
     }
@@ -70,7 +71,7 @@ export function QuizEditor({
                         Cancel
                     </Button>
                     <Button
-                        onClick={() => deleteQuiz(quiz.id)}
+                        onClick={() => deleteQuestion(question.id)}
                         variant="danger"
                         className="me-8"
                     >
