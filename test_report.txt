@@ -10,7 +10,7 @@ PASS src/components/TwoDice.test.tsx
 PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
-FAIL src/HtmlCss.test.tsx (5.141 s)
+FAIL src/HtmlCss.test.tsx
   ● Console
 
     console.error
@@ -193,6 +193,11 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       [36m</button>[39m
     [36m</h3>[39m
 
+    Ignored nodes: comments, <script />, <style />
+    [36m<h3>[39m
+      [0mOld Material: [0m
+    [36m</h3>[39m
+
     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
 
     Ignored nodes: comments, <script />, <style />
@@ -238,7 +243,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -392,7 +397,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
        7 |     test("There is a header", () => {
        8 |         render(<App />);
@@ -411,672 +416,22 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
 
   ● Some HTML Elements are added. › There is an image with alt text
 
-    TestingLibraryElementError: Unable to find an accessible element with the role "img"
+    expect(element).toHaveAttribute("alt") // element.hasAttribute("alt")
 
-    Here are the accessible roles:
+    Expected the element to have attribute:
+      alt
+    Received:
+      null
 
-      banner:
-
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      heading:
-
-      Name "Quizzer":
-      [36m<h3 />[39m
-
-      Name "Q1 - 3 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q2 - 4 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q3 - 3 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q4 - 5 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q5 - 5 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      --------------------------------------------------
-      list:
-
-      Name "":
-      [36m<ul />[39m
-
-      --------------------------------------------------
-      listitem:
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      --------------------------------------------------
-      button:
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "use":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "gain":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Double":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Halve":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Alan Turing":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Grace Hopper":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Ada Lovelace":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Charles Babbage":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Barbara Liskov":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Margaret Hamilton":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Clear Team":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Next Color":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Shove the Box":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Add One":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Reveal Answer":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Start Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Stop Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mdisabled[39m=[32m""[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Mulligan":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Roll Left":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Roll right":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Change Type":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Advance by Alphabet":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Advance by Year":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      separator:
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      --------------------------------------------------
-      textbox:
-
-      Name "Answer: Choose your answer:":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-control"[39m
-        [33mid[39m=[32m"formAnswer"[39m
-        [33mvalue[39m=[32m""[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      spinbutton:
-
-      Name "Answer:":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-control"[39m
-        [33mid[39m=[32m"giveAttempts"[39m
-        [33mrole[39m=[32m"spinbutton"[39m
-        [33mvalue[39m=[32m""[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      checkbox:
-
-      Name "Edit mode?":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-edit-mode-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      radio:
-
-      Name "Choose a color red blue green orange purple yellow cyan magenta":
-      [36m<input[39m
-        [33mchecked[39m=[32m""[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"red"[39m
-      [36m/>[39m
-
-      Name "blue":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"blue"[39m
-      [36m/>[39m
-
-      Name "green":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"green"[39m
-      [36m/>[39m
-
-      Name "orange":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"orange"[39m
-      [36m/>[39m
-
-      Name "purple":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"purple"[39m
-      [36m/>[39m
-
-      Name "yellow":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"yellow"[39m
-      [36m/>[39m
-
-      Name "cyan":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"cyan"[39m
-      [36m/>[39m
-
-      Name "magenta":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"magenta"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      combobox:
-
-      Name "":
-      [36m<select[39m
-        [33mclass[39m=[32m"form-select"[39m
-        [33mid[39m=[32m"formAnswer"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      option:
-
-      Name "a":
-      [36m<option[39m
-        [33mvalue[39m=[32m"a"[39m
-      [36m/>[39m
-
-      Name "b":
-      [36m<option[39m
-        [33mvalue[39m=[32m"b"[39m
-      [36m/>[39m
-
-      Name "c":
-      [36m<option[39m
-        [33mvalue[39m=[32m"c"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript[0m
-          [36m</header>[39m
-          [36m<h3>[39m
-            [0mQuizzer[0m
-          [36m</h3>[39m
-          [36m<p>[39m
-            [0mCompleted Features:[0m
-          [36m</p>[39m
-          [36m<ul>[39m
-            [36m<li>[39m
-              [0mApplication sketch[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mQuizzes are visible[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mQuizzes have questions[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mShort answer and multiple choice[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mCheck correctness[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mPublish questions[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mEdit questions[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mDelete quizzes [0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
-            [36m</li>[39m
-          [36m</ul>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ1[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m3[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m                       [0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mDelete Quiz[0m
-                        [36m</button>[39m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mthis is the first set of test questions[0m
-                        [0m [0m
-                        [0m [0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ2[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m4[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m                       [0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mDelete Quiz[0m
-                        [36m</button>[39m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mthis is the second set of test questions[0m
-                        [0m [0m
-                        [0m [0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ3[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m3[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m                       [0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mDelete Quiz[0m
-                        [36m</button>[39m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mthis is the third set of test questions[0m
-                        [0m [0m
-                        [0m [0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ4[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m5[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m            ...
-
-      13 |     test("There is an image with alt text", () => {
-      14 |         render(<App />);
-    > 15 |         const image = screen.getByRole("img");
-         |                              ^
+      15 |         const image = screen.getByRole("img");
       16 |         expect(image).toBeInTheDocument();
-      17 |         expect(image).toHaveAttribute("alt");
+    > 17 |         expect(image).toHaveAttribute("alt");
+         |                       ^
       18 |     });
+      19 |
+      20 |     test("There is a list with at least three elements", () => {
 
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:15:30)
+      at Object.<anonymous> (src/HtmlCss.test.tsx:17:23)
 
   ● Some Bootstrap Elements are added › There is one bootstrap button with the text 'Log Hello World'
 
@@ -1112,6 +467,9 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       Name "Q5 - 5 questions View Delete Quiz":
       [36m<h3 />[39m
 
+      Name "Old Material:":
+      [36m<h3 />[39m
+
       --------------------------------------------------
       list:
 
@@ -1351,6 +709,14 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       [36m/>[39m
 
       --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33msrc[39m=[32m"image.jpg"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
       separator:
 
       Name "":
@@ -1577,7 +943,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -1731,7 +1097,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
       39 |     test("There is one bootstrap button with the text 'Log Hello World'", () => {
       40 |         render(<App />);
@@ -1781,6 +1147,9 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       Name "Q5 - 5 questions View Delete Quiz":
       [36m<h3 />[39m
 
+      Name "Old Material:":
+      [36m<h3 />[39m
+
       --------------------------------------------------
       list:
 
@@ -2020,6 +1389,14 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       [36m/>[39m
 
       --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33msrc[39m=[32m"image.jpg"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
       separator:
 
       Name "":
@@ -2246,7 +1623,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -2400,7 +1777,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
       54 |         const consoleSpy = jest.spyOn(console, "log");
       55 |         render(<App />);
@@ -2568,7 +1945,7 @@ FAIL src/text.test.tsx
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -2722,7 +2099,7 @@ FAIL src/text.test.tsx
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
        5 | test("renders the text 'Hello World' somewhere", () => {
        6 |     render(<App />);
@@ -2797,7 +2174,7 @@ All files                    |   89.57 |    85.24 |   82.53 |   89.65 |
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
  src/quizzer                 |   27.77 |        0 |   14.28 |      25 |                   
-  Quizzer.tsx                |   27.77 |        0 |   14.28 |      25 | 23-74             
+  Quizzer.tsx                |   27.77 |        0 |   14.28 |      25 | 25-76             
  src/quizzer/components      |   15.38 |    14.28 |   19.04 |   15.38 |                   
   RecordControls.tsx         |      50 |      100 |      50 |      50 | 23                
   questionEditor.tsx         |       0 |        0 |       0 |       0 | 19-83             
@@ -2811,7 +2188,7 @@ All files                    |   89.57 |    85.24 |   82.53 |   89.65 |
 -----------------------------|---------|----------|---------|---------|-------------------
 
 Summary of all failing tests
-FAIL src/HtmlCss.test.tsx (5.141 s)
+FAIL src/HtmlCss.test.tsx
   ● Some HTML Elements are added. › There is a header
 
     TestingLibraryElementError: Found multiple elements with the role "heading"
@@ -2943,6 +2320,11 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       [36m</button>[39m
     [36m</h3>[39m
 
+    Ignored nodes: comments, <script />, <style />
+    [36m<h3>[39m
+      [0mOld Material: [0m
+    [36m</h3>[39m
+
     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
 
     Ignored nodes: comments, <script />, <style />
@@ -2988,7 +2370,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -3142,7 +2524,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
        7 |     test("There is a header", () => {
        8 |         render(<App />);
@@ -3161,672 +2543,22 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
 
   ● Some HTML Elements are added. › There is an image with alt text
 
-    TestingLibraryElementError: Unable to find an accessible element with the role "img"
+    expect(element).toHaveAttribute("alt") // element.hasAttribute("alt")
 
-    Here are the accessible roles:
+    Expected the element to have attribute:
+      alt
+    Received:
+      null
 
-      banner:
-
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      heading:
-
-      Name "Quizzer":
-      [36m<h3 />[39m
-
-      Name "Q1 - 3 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q2 - 4 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q3 - 3 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q4 - 5 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      Name "Q5 - 5 questions View Delete Quiz":
-      [36m<h3 />[39m
-
-      --------------------------------------------------
-      list:
-
-      Name "":
-      [36m<ul />[39m
-
-      --------------------------------------------------
-      listitem:
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      --------------------------------------------------
-      button:
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "View":
-      [36m<button[39m
-        [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Delete Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "use":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "gain":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Double":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Halve":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Alan Turing":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Grace Hopper":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Ada Lovelace":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Charles Babbage":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Barbara Liskov":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Margaret Hamilton":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Clear Team":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Next Color":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Shove the Box":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Add One":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Reveal Answer":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Start Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Stop Quiz":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mdisabled[39m=[32m""[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Mulligan":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Roll Left":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Roll right":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Change Type":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Advance by Alphabet":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Advance by Year":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      separator:
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      Name "":
-      [36m<hr />[39m
-
-      --------------------------------------------------
-      textbox:
-
-      Name "Answer: Choose your answer:":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-control"[39m
-        [33mid[39m=[32m"formAnswer"[39m
-        [33mvalue[39m=[32m""[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      spinbutton:
-
-      Name "Answer:":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-control"[39m
-        [33mid[39m=[32m"giveAttempts"[39m
-        [33mrole[39m=[32m"spinbutton"[39m
-        [33mvalue[39m=[32m""[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      checkbox:
-
-      Name "Edit mode?":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-edit-mode-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      radio:
-
-      Name "Choose a color red blue green orange purple yellow cyan magenta":
-      [36m<input[39m
-        [33mchecked[39m=[32m""[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"red"[39m
-      [36m/>[39m
-
-      Name "blue":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"blue"[39m
-      [36m/>[39m
-
-      Name "green":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"green"[39m
-      [36m/>[39m
-
-      Name "orange":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"orange"[39m
-      [36m/>[39m
-
-      Name "purple":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"purple"[39m
-      [36m/>[39m
-
-      Name "yellow":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"yellow"[39m
-      [36m/>[39m
-
-      Name "cyan":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"cyan"[39m
-      [36m/>[39m
-
-      Name "magenta":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"favoriteColors"[39m
-        [33mname[39m=[32m"colors"[39m
-        [33mtype[39m=[32m"radio"[39m
-        [33mvalue[39m=[32m"magenta"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      combobox:
-
-      Name "":
-      [36m<select[39m
-        [33mclass[39m=[32m"form-select"[39m
-        [33mid[39m=[32m"formAnswer"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      option:
-
-      Name "a":
-      [36m<option[39m
-        [33mvalue[39m=[32m"a"[39m
-      [36m/>[39m
-
-      Name "b":
-      [36m<option[39m
-        [33mvalue[39m=[32m"b"[39m
-      [36m/>[39m
-
-      Name "c":
-      [36m<option[39m
-        [33mvalue[39m=[32m"c"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript[0m
-          [36m</header>[39m
-          [36m<h3>[39m
-            [0mQuizzer[0m
-          [36m</h3>[39m
-          [36m<p>[39m
-            [0mCompleted Features:[0m
-          [36m</p>[39m
-          [36m<ul>[39m
-            [36m<li>[39m
-              [0mApplication sketch[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mQuizzes are visible[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mQuizzes have questions[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mShort answer and multiple choice[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mCheck correctness[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mPublish questions[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mEdit questions[0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mDelete quizzes [0m
-            [36m</li>[39m
-            [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
-            [36m</li>[39m
-          [36m</ul>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ1[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m3[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m                       [0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mDelete Quiz[0m
-                        [36m</button>[39m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mthis is the first set of test questions[0m
-                        [0m [0m
-                        [0m [0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ2[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m4[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m                       [0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mDelete Quiz[0m
-                        [36m</button>[39m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mthis is the second set of test questions[0m
-                        [0m [0m
-                        [0m [0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ3[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m3[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m                       [0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mDelete Quiz[0m
-                        [36m</button>[39m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mthis is the third set of test questions[0m
-                        [0m [0m
-                        [0m [0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [36m<h3>[39m
-                        [0mQ4[0m
-                        [0m [0m
-                        [0m - [0m
-                        [0m [0m
-                        [0m5[0m
-                        [0m [0m
-                        [0m questions[0m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"float-right btn btn-primary btn-sm"[39m
-                          [33mtype[39m=[32m"button"[39m
-                        [36m>[39m
-                          [0mView[0m
-                        [36m</button>[39m
-                        [0m            ...
-
-      13 |     test("There is an image with alt text", () => {
-      14 |         render(<App />);
-    > 15 |         const image = screen.getByRole("img");
-         |                              ^
+      15 |         const image = screen.getByRole("img");
       16 |         expect(image).toBeInTheDocument();
-      17 |         expect(image).toHaveAttribute("alt");
+    > 17 |         expect(image).toHaveAttribute("alt");
+         |                       ^
       18 |     });
+      19 |
+      20 |     test("There is a list with at least three elements", () => {
 
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:15:30)
+      at Object.<anonymous> (src/HtmlCss.test.tsx:17:23)
 
   ● Some Bootstrap Elements are added › There is one bootstrap button with the text 'Log Hello World'
 
@@ -3862,6 +2594,9 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       Name "Q5 - 5 questions View Delete Quiz":
       [36m<h3 />[39m
 
+      Name "Old Material:":
+      [36m<h3 />[39m
+
       --------------------------------------------------
       list:
 
@@ -4101,6 +2836,14 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       [36m/>[39m
 
       --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33msrc[39m=[32m"image.jpg"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
       separator:
 
       Name "":
@@ -4327,7 +3070,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -4481,7 +3224,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
       39 |     test("There is one bootstrap button with the text 'Log Hello World'", () => {
       40 |         render(<App />);
@@ -4531,6 +3274,9 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       Name "Q5 - 5 questions View Delete Quiz":
       [36m<h3 />[39m
 
+      Name "Old Material:":
+      [36m<h3 />[39m
+
       --------------------------------------------------
       list:
 
@@ -4770,6 +3516,14 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
       [36m/>[39m
 
       --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33msrc[39m=[32m"image.jpg"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
       separator:
 
       Name "":
@@ -4996,7 +3750,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -5150,7 +3904,7 @@ FAIL src/HtmlCss.test.tsx (5.141 s)
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
       54 |         const consoleSpy = jest.spyOn(console, "log");
       55 |         render(<App />);
@@ -5214,7 +3968,7 @@ FAIL src/text.test.tsx
               [0mDelete quizzes [0m
             [36m</li>[39m
             [36m<li>[39m
-              [0mWorking on: publish/unpublish questions[0m
+              [0mPublish/unpublish questions[0m
             [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
@@ -5368,7 +4122,7 @@ FAIL src/text.test.tsx
                         [36m>[39m
                           [0mView[0m
                         [36m</button>[39m
-                        [0m            ...
+                        [0m                       ...
 
        5 | test("renders the text 'Hello World' somewhere", () => {
        6 |     render(<App />);
@@ -5387,5 +4141,5 @@ FAIL src/text.test.tsx
 Test Suites: 2 failed, 21 passed, 23 total
 Tests:       5 failed, 138 passed, 143 total
 Snapshots:   0 total
-Time:        16.4 s
+Time:        15.215 s
 Ran all test suites.
