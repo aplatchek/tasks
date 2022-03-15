@@ -121,3 +121,8 @@
     font-size: calc(10px + 2vmin);
     color: black;
 }
+
+img {
+    max-width: 50%;
+    height: auto;
+}

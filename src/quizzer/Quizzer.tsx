@@ -3,6 +3,8 @@ import questioning from "./data/initalQuestions.json";
 import { Quiz } from "./interfaces/quiz";
 import { QuizList } from "./components/quizList";
 import { Question } from "./interfaces/question";
+import ApplicationSketch from "./assets/image.jpg";
+import "../App.css";
 //import { propTypes } from "react-bootstrap/esm/Image";
 
 const QUIZZES = questioning.map((quiz): Quiz => ({ ...quiz }));
@@ -99,7 +101,7 @@ export function Quizzer(): JSX.Element {
                     <li>Publish questions</li>
                     <li>Edit questions</li>
                     <li>Delete quizzes </li>
-                    <li>Working on: publish/unpublish questions</li>
+                    <li>Publish/unpublish questions</li>
                 </ul>
             </>
             <div>
@@ -113,6 +115,8 @@ export function Quizzer(): JSX.Element {
                     deleteQuestion={deleteQuestion}
                     publishQuestion={publishQuestion}
                 ></QuizList>
+
+                <img src={ApplicationSketch}></img>
             </div>
         </>
     );
