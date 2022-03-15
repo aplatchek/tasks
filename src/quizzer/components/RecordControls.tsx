@@ -7,11 +7,11 @@ export function RecordControlsQuiz({
     changeViewing: () => void;
 }): JSX.Element {
     return (
-        <div>
+        <>
             <Button className="float-right" size="sm" onClick={changeViewing}>
                 View
             </Button>
-        </div>
+        </>
     );
 }
 

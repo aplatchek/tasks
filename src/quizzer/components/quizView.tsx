@@ -37,20 +37,18 @@ export function QuizView({
     ) : (
         <Container>
             <Row>
-                <Col>
+                <div>
                     <h3>
                         {quiz.title} {" - "} {quiz.numberQuestions}{" "}
                         {" questions"}
                     </h3>
-                    <p>{quiz.description}</p>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <RecordControlsQuiz
-                        changeViewing={changeViewing}
-                    ></RecordControlsQuiz>
-                </Col>
+                    <p>
+                        {quiz.description} {}{" "}
+                        <RecordControlsQuiz
+                            changeViewing={changeViewing}
+                        ></RecordControlsQuiz>
+                    </p>
+                </div>
             </Row>
         </Container>
     );
