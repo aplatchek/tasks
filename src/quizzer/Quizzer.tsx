@@ -102,6 +102,7 @@ export function Quizzer(): JSX.Element {
                     <li>Edit questions</li>
                     <li>Delete quiz</li>
                     <li>Publish/unpublish questions</li>
+                    <li>Tests for all above features</li>
                 </ul>
             </>
             <div>
