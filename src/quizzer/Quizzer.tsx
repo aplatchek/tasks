@@ -100,7 +100,7 @@ export function Quizzer(): JSX.Element {
                     <li>Check correctness</li>
                     <li>Publish questions</li>
                     <li>Edit questions</li>
-                    <li>Delete quizzes </li>
+                    <li>Delete quiz</li>
                     <li>Publish/unpublish questions</li>
                 </ul>
             </>
