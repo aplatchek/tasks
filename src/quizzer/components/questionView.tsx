@@ -55,7 +55,10 @@ export function QuestionView({
                     </Col>
                     {question.type === "short_answer_question" ? (
                         <p>
-                            <Form.Group controlId="giveAttempts">
+                            <Form.Group
+                                controlId="Short Answer"
+                                data-testid={String(question.id)}
+                            >
                                 <Form.Label>Answer:</Form.Label>
                                 <Form.Control
                                     value={answer}
@@ -69,7 +72,10 @@ export function QuestionView({
                         </p>
                     ) : (
                         <p>
-                            <Form.Group controlId="formAnswer">
+                            <Form.Group
+                                controlId="formAnswer"
+                                data-testid={String(question.id)}
+                            >
                                 <Form.Label>Choose your answer:</Form.Label>
                                 <Form.Select
                                     value={answer}

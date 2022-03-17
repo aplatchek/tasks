@@ -60,5 +60,4 @@ describe("Some Bootstrap Elements are added", () => {
 });
 
 /**
- * Remember, there are additional tasks described on the page!
- */
+ * Remember, there are additional tasks described on the page!*/

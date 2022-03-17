@@ -37,7 +37,11 @@ export function QuestionEditor({
             <Row>
                 <Col>
                     {/* Title */}
-                    <Form.Group controlId="formQuizTitle" as={Row}>
+                    <Form.Group
+                        controlId="formQuizTitle"
+                        data-testid={"T" + question.id}
+                        as={Row}
+                    >
                         <Form.Label column sm={2}>
                             Title:
                         </Form.Label>
@@ -60,6 +64,7 @@ export function QuestionEditor({
                                 as="textarea"
                                 rows={3}
                                 value={description}
+                                data-testid={"D" + question.id}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLTextAreaElement>
                                 ) => setDescription(event.target.value)}
@@ -84,7 +89,7 @@ export function QuestionEditor({
                         variant="danger"
                         className="me-11"
                     >
-                        Publish/Unpublish
+                        Publish
                     </Button>
                     {question.published ? "published" : "not published"}
                 </Col>
