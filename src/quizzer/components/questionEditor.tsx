@@ -89,7 +89,7 @@ export function QuestionEditor({
                         variant="danger"
                         className="me-11"
                     >
-                        Publish/Unpublish
+                        Publish
                     </Button>
                     {question.published ? "published" : "not published"}
                 </Col>
